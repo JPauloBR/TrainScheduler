@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Train Scheduler</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+</head>
+<body>
+
+	<div class="container">
+
+		<div class="jumbotron jumbotron-fluid bg-info text-white text-center">
+		  <div class="container">
+		    <h1 class="display-1">Anytime is Train Time</h1>
+		    <p class="lead">Choo Choo. Chee Chee!</p>
+		    <hr class="my-4">
+		    <h1 class="display-5">Current Time</h1>
+		  </div>
+		</div>
+
+
+		<div class="card">
+		  <h4 class="card-header bg-info text-white">Current Train Schedule</h4>
+		  <div class="card-body">
+
+			<table class="table">
+			  <thead>
+			    <tr class="text-center">
+			      <th>Train Name</th>
+			      <th>Destination</th>
+			      <th>Frequency(min)</th>
+			      <th>Next Arrival</th>
+			      <th>Minutes Away</th>
+			    </tr>
+			  </thead>
+
+			  <tbody id="train-list" class="text-center">
+
+			  </tbody>
+			</table>
+
+		  </div>
+		</div>
+
+		<hr></hr>
+
+		<div class="card">
+			<h4 class="card-header bg-info text-white">Add Train</h4>
+			<div class="card-body">
+
+			<form>
+			  <div class="form-group">
+			    <label>Train Name</label>
+			    <input type="text" class="form-control" id="train-input">
+			  </div>
+			  <div class="form-group">
+			    <label>Destination</label>
+			    <input type="text" class="form-control" id="destination-input">
+			  </div>
+			  <div class="form-group">
+			    <label>First Train Time (HH:mm - military time)</label>
+			    <input type="text" class="form-control" id="time-input">
+			  </div>
+			  <div class="form-group">
+			    <label>Frequency (min)</label>
+			    <input type="text" class="form-control" id="frequency-input">
+			  </div>
+			  <button type="submit" class="btn btn-primary" id="add-train">Submit</button>
+			</form>		
+
+			</div>
+		 </div>
+
+	</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+<script src="https://www.gstatic.com/firebasejs/4.6.0/firebase.js"></script>
+<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+<script src="logic.js"></script>
+</body>
+</html>
